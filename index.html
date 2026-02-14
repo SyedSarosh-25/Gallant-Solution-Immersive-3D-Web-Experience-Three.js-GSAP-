@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description"
+    content="Gallant Solutions — Enter the New World. We build digital realities through VR AI Simulators, Game Development, 3D Modeling, Graphic Design, and Animation." />
+  <meta name="keywords"
+    content="Gallant Solutions, VR, AI, Game Development, 3D Modeling, Animation, Digital Reality" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <title>Gallant Solutions — Enter the New World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>" />
+</head>
+
+<body>
+  <!-- PHASE 1: Portal Entry -->
+  <div id="portal-container">
+    <canvas id="portal-canvas"></canvas>
+    <div id="portal-ui">
+      <div id="portal-features">
+        <span class="portal-pill">🥽 VR & AI</span>
+        <span class="portal-pill">🎮 Game Dev</span>
+        <span class="portal-pill">🏗️ 3D Modeling</span>
+        <span class="portal-pill">🎨 Design</span>
+        <span class="portal-pill">🎬 Animation</span>
+      </div>
+      <div id="portal-title">
+        <span class="title-line title-main">GALLANT SOLUTIONS</span>
+        <span class="title-line title-sub">Enter a New World</span>
+        <span class="title-line title-tagline">We build immersive digital experiences — from VR simulators to cinematic
+          game worlds</span>
+      </div>
+      <button id="enter-btn">
+        <span class="btn-text">EXPLORE ▸</span>
+        <span class="btn-glow"></span>
+        <svg class="btn-border" viewBox="0 0 200 60">
+          <rect x="1" y="1" width="198" height="58" rx="8" ry="8" />
+        </svg>
+      </button>
+    </div>
+    <div id="loading-overlay">
+      <div class="loader-ring"></div>
+      <span class="loader-text">INITIALIZING</span>
+    </div>
+  </div>
+
+  <!-- Transition Flash -->
+  <div id="transition-flash"></div>
+
+  <!-- PHASE 2: Main World -->
+  <div id="world-container" style="display:none;">
+    <canvas id="world-canvas"></canvas>
+
+    <!-- Navigation moved outside scroll-content -->
+    <nav id="main-nav">
+      <div class="nav-logo" id="nav-logo-btn" style="cursor: pointer;">
+        <span class="nav-logo-icon">◆</span>
+        <span class="nav-logo-text">GALLANT</span>
+      </div>
+      <div class="nav-links">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#services" class="nav-link" data-section="services">Services</a>
+        <a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <button class="nav-contact-btn" id="nav-contact-link">Contact Us</button>
+      </div>
+    </nav>
+
+    <div id="scroll-content">
+
+      <!-- HOMEPAGE -->
+      <section id="home" class="section section-home">
+        <div class="section-inner">
+          <div class="home-badge">◈ WELCOME TO THE DIGITAL UNIVERSE ◈</div>
+          <h1 class="home-title">
+            <span class="title-word" data-delay="0">Building</span>
+            <span class="title-word" data-delay="1">Digital</span>
+            <span class="title-word accent" data-delay="2">Realities</span>
+          </h1>
+          <p class="home-subtitle">Where Simulation Meets Innovation</p>
+          <div class="home-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="150">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Global Clients</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="5">0</span>
+              <span class="stat-label">Core Divisions</span>
+            </div>
+          </div>
+          <div class="scroll-indicator">
+            <div class="scroll-mouse">
+              <div class="scroll-dot"></div>
+            </div>
+            <span>Scroll to explore</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section section-services">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">◈ OUR EXPERTISE</span>
+            <h2 class="section-title">Services</h2>
+            <p class="section-desc">Five divisions. One digital universe.</p>
+          </div>
+
+          <!-- Service 1: VR AI Simulators -->
+          <div class="service-card" data-service="vr" id="service-vr">
+            <div class="service-number">01</div>
+            <div class="service-visual">
+              <div class="service-icon-wrap">
+                <div class="hologram-ring"></div>
+                <div class="hologram-ring r2"></div>
+                <div class="service-icon">🥽</div>
+              </div>
+            </div>
+            <div class="service-info">
+              <h3>VR &amp; AI Simulators</h3>
+              <p>Immersive training environments powered by artificial intelligence. Real-time physics, adaptive
+                difficulty, and neural-responsive feedback systems for next-generation simulation.</p>
+              <div class="service-tags">
+                <span class="tag">Virtual Reality</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Neural Networks</span>
+              </div>
+            </div>
+            <div class="service-glow"></div>
+          </div>
+
+          <!-- Service 2: Game Development -->
+          <div class="service-card" data-service="game" id="service-game">
+            <div class="service-number">02</div>
+            <div class="service-visual">
+              <div class="service-icon-wrap">
+                <div class="hologram-ring"></div>
+                <div class="hologram-ring r2"></div>
+                <div class="service-icon">🎮</div>
+              </div>
+            </div>
+            <div class="service-info">
+              <h3>Game Development</h3>
+              <p>AAA-quality game experiences built with cutting-edge engines. From concept art to final render — every
+                polygon matters, every frame tells a story.</p>
+              <div class="service-tags">
+                <span class="tag">Unreal Engine</span>
+                <span class="tag">Unity</span>
+                <span class="tag">Real-time Rendering</span>
+              </div>
+            </div>
+            <div class="service-glow"></div>
+          </div>
+
+          <!-- Service 3: Real Estate 3D -->
+          <div class="service-card" data-service="realestate" id="service-realestate">
+            <div class="service-number">03</div>
+            <div class="service-visual">
+              <div class="service-icon-wrap">
+                <div class="hologram-ring"></div>
+                <div class="hologram-ring r2"></div>
+                <div class="service-icon">🏗️</div>
+              </div>
+            </div>
+            <div class="service-info">
+              <h3>Real Estate 3D Modeling</h3>
+              <p>Photorealistic architectural visualization with dynamic lighting. Walk through unbuilt spaces. Change
+                materials, time of day, and furnishings in real-time.</p>
+              <div class="service-tags">
+                <span class="tag">3D Architecture</span>
+                <span class="tag">BIM</span>
+                <span class="tag">Virtual Tours</span>
+              </div>
+            </div>
+            <div class="service-glow"></div>
+          </div>
+
+          <!-- Service 4: Graphic Designing -->
+          <div class="service-card" data-service="design" id="service-design">
+            <div class="service-number">04</div>
+            <div class="service-visual">
+              <div class="service-icon-wrap">
+                <div class="hologram-ring"></div>
+                <div class="hologram-ring r2"></div>
+                <div class="service-icon">🎨</div>
+              </div>
+            </div>
+            <div class="service-info">
+              <h3>Graphic Designing</h3>
+              <p>Visual identities that transcend screens. Brand systems, motion graphics, and digital art that lives at
+                the intersection of creativity and technology.</p>
+              <div class="service-tags">
+                <span class="tag">Brand Identity</span>
+                <span class="tag">Motion Graphics</span>
+                <span class="tag">UI/UX</span>
+              </div>
+            </div>
+            <div class="service-glow"></div>
+          </div>
+
+          <!-- Service 5: Animation Studio -->
+          <div class="service-card" data-service="animation" id="service-animation">
+            <div class="service-number">05</div>
+            <div class="service-visual">
+              <div class="service-icon-wrap">
+                <div class="hologram-ring"></div>
+                <div class="hologram-ring r2"></div>
+                <div class="service-icon">🎬</div>
+              </div>
+            </div>
+            <div class="service-info">
+              <h3>Animation Studio</h3>
+              <p>Character animation, motion capture, and cinematic sequences. From keyframe to mocap — we bring digital
+                characters to life with soul and precision.</p>
+              <div class="service-tags">
+                <span class="tag">Motion Capture</span>
+                <span class="tag">Character Rigging</span>
+                <span class="tag">Cinematics</span>
+              </div>
+            </div>
+            <div class="service-glow"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio" class="section section-portfolio">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">◈ SELECTED WORK</span>
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-desc">A glimpse into our digital creations.</p>
+          </div>
+          <div class="portfolio-grid">
+            <div class="portfolio-card" id="portfolio-1">
+              <div class="portfolio-visual">
+                <div class="portfolio-icon">🌌</div>
+                <div class="portfolio-overlay"></div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">VR Simulation</span>
+                <h3>NeuroSim Training Platform</h3>
+                <p>AI-driven VR training for medical professionals. 40% improvement in surgical accuracy.</p>
+              </div>
+            </div>
+            <div class="portfolio-card" id="portfolio-2">
+              <div class="portfolio-visual">
+                <div class="portfolio-icon">⚔️</div>
+                <div class="portfolio-overlay"></div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">Game Development</span>
+                <h3>Chronicles of Aethon</h3>
+                <p>Open-world RPG with procedural environments and ray tracing. 2M+ downloads in 3 months.</p>
+              </div>
+            </div>
+            <div class="portfolio-card" id="portfolio-3">
+              <div class="portfolio-visual">
+                <div class="portfolio-icon">🏛️</div>
+                <div class="portfolio-overlay"></div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">3D Architecture</span>
+                <h3>Skyline Residences</h3>
+                <p>Photorealistic virtual tours. 85% of luxury units sold before construction began.</p>
+              </div>
+            </div>
+            <div class="portfolio-card" id="portfolio-4">
+              <div class="portfolio-visual">
+                <div class="portfolio-icon">🎭</div>
+                <div class="portfolio-overlay"></div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">Animation</span>
+                <h3>Sentient — Short Film</h3>
+                <p>Award-winning animated short exploring AI consciousness. Official selection at 12 festivals.</p>
+              </div>
+            </div>
+            <div class="portfolio-card" id="portfolio-5">
+              <div class="portfolio-visual">
+                <div class="portfolio-icon">🔮</div>
+                <div class="portfolio-overlay"></div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">Brand & Design</span>
+                <h3>NexGen Corporate Identity</h3>
+                <p>Complete brand overhaul for a Fortune 500 tech company. 3D logo system and holographic packaging.</p>
+              </div>
+            </div>
+            <div class="portfolio-card" id="portfolio-6">
+              <div class="portfolio-visual">
+                <div class="portfolio-icon">🧬</div>
+                <div class="portfolio-overlay"></div>
+              </div>
+              <div class="portfolio-info">
+                <span class="portfolio-category">VR Research</span>
+                <h3>BioVerse Lab</h3>
+                <p>Immersive molecular visualization for biotech. Used by 30+ universities worldwide.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT US -->
+      <section id="about" class="section section-about">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">◈ OUR STORY</span>
+            <h2 class="section-title">About Us</h2>
+            <p class="section-desc">Pioneering digital frontiers since day one.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text-block">
+              <p class="about-lead">We are <strong>Gallant Solutions</strong> — a collective of engineers, artists, and
+                visionaries building the bridge between physical reality and digital worlds.</p>
+              <p>Our mission is to push the boundaries of what's possible in immersive technology. Every project is a
+                portal. Every pixel is intentional. Every experience leaves a mark.</p>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item" data-year="2019">
+                <div class="timeline-node"></div>
+                <div class="timeline-content">
+                  <h4>Founded</h4>
+                  <p>Gallant Solutions established with a vision to revolutionize digital experiences.</p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="2020">
+                <div class="timeline-node"></div>
+                <div class="timeline-content">
+                  <h4>VR Division Launch</h4>
+                  <p>Expanded into VR/AI simulation with enterprise training contracts.</p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="2021">
+                <div class="timeline-node"></div>
+                <div class="timeline-content">
+                  <h4>Game Studio Opens</h4>
+                  <p>First AAA-quality game project delivered. Unreal Engine partnership formed.</p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="2023">
+                <div class="timeline-node"></div>
+                <div class="timeline-content">
+                  <h4>Global Expansion</h4>
+                  <p>Operations expanded to serve clients across 15+ countries.</p>
+                </div>
+              </div>
+              <div class="timeline-item" data-year="2025">
+                <div class="timeline-node"></div>
+                <div class="timeline-content">
+                  <h4>The New World</h4>
+                  <p>Launched our most ambitious platform — merging all divisions into one digital universe.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-grid">
+              <h3 class="team-title">The Collective</h3>
+              <div class="team-members">
+                <div class="team-member" id="member-1">
+                  <div class="member-avatar">
+                    <div class="avatar-ring"></div>
+                    <span class="avatar-initial">A</span>
+                  </div>
+                  <h4>Alex Chen</h4>
+                  <span class="member-role">Founder & CEO</span>
+                  <p class="member-bio">Visionary leader with 15 years in immersive tech. Former lead at a major XR lab.
+                  </p>
+                </div>
+                <div class="team-member" id="member-2">
+                  <div class="member-avatar">
+                    <div class="avatar-ring"></div>
+                    <span class="avatar-initial">S</span>
+                  </div>
+                  <h4>Sara Khan</h4>
+                  <span class="member-role">Creative Director</span>
+                  <p class="member-bio">Award-winning designer merging art with technology. Specialist in spatial
+                    design.</p>
+                </div>
+                <div class="team-member" id="member-3">
+                  <div class="member-avatar">
+                    <div class="avatar-ring"></div>
+                    <span class="avatar-initial">M</span>
+                  </div>
+                  <h4>Marcus Rivera</h4>
+                  <span class="member-role">CTO</span>
+                  <p class="member-bio">Full-stack engineer and AI researcher. Architect of our simulation framework.
+                  </p>
+                </div>
+                <div class="team-member" id="member-4">
+                  <div class="member-avatar">
+                    <div class="avatar-ring"></div>
+                    <span class="avatar-initial">L</span>
+                  </div>
+                  <h4>Luna Park</h4>
+                  <span class="member-role">Head of Animation</span>
+                  <p class="member-bio">Cinematic storyteller. 10+ years in AAA game cinematics and motion capture.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section id="testimonials" class="section section-testimonials">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">◈ CLIENT VOICES</span>
+            <h2 class="section-title">Testimonials</h2>
+            <p class="section-desc">What our partners say about working with us.</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card" id="testimonial-1">
+              <div class="testimonial-quote">"</div>
+              <p class="testimonial-text">Gallant Solutions transformed our training program. The VR simulator they
+                built reduced onboarding time by 60% and our team engagement went through the roof.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><span>R</span></div>
+                <div class="author-info">
+                  <h4>Rachel Torres</h4>
+                  <span>VP of Operations, MedCore Inc.</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card" id="testimonial-2">
+              <div class="testimonial-quote">"</div>
+              <p class="testimonial-text">The 3D architectural walkthroughs were indistinguishable from reality. Our
+                buyers made purchasing decisions from another continent with complete confidence.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><span>J</span></div>
+                <div class="author-info">
+                  <h4>James Whitfield</h4>
+                  <span>CEO, Apex Properties</span>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card" id="testimonial-3">
+              <div class="testimonial-quote">"</div>
+              <p class="testimonial-text">Working with Gallant felt like collaborating with a team from the future.
+                Their creative vision and technical execution are in a league of their own.</p>
+              <div class="testimonial-author">
+                <div class="author-avatar"><span>K</span></div>
+                <div class="author-info">
+                  <h4>Kim Nakamura</h4>
+                  <span>Creative Lead, Zenith Studios</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA BANNER -->
+      <section id="cta" class="section section-cta">
+        <div class="section-inner">
+          <div class="cta-content">
+            <span class="cta-tag">◈ READY TO BEGIN?</span>
+            <h2 class="cta-title">Let's Build Your <span class="cta-accent">Digital Reality</span></h2>
+            <p class="cta-desc">From concept to launch, we'll bring your vision to life with cutting-edge technology and
+              world-class design.</p>
+            <div class="cta-buttons">
+              <a href="#contact" class="cta-primary" id="cta-start">START A PROJECT</a>
+              <a href="#portfolio" class="cta-secondary" id="cta-work">VIEW OUR WORK</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT US -->
+      <section id="contact" class="section section-contact">
+        <div class="section-inner">
+          <div class="section-header">
+            <span class="section-tag">◈ GET IN TOUCH</span>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-desc">Ready to build something extraordinary? Let's talk.</p>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Name</label>
+                  <input type="text" id="contact-name" name="name" placeholder="Your name" required />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email</label>
+                  <input type="email" id="contact-email" name="email" placeholder="you@company.com" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" name="subject"
+                  placeholder="Project inquiry, partnership, or general question" />
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message"
+                  placeholder="Tell us about your project, goals, and timeline..." required></textarea>
+              </div>
+              <button type="submit" class="form-submit" id="contact-submit">SEND MESSAGE</button>
+            </form>
+            <div id="form-success" class="form-success">
+              <span class="form-success-icon">✦</span>
+              <h3>Message Sent</h3>
+              <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer id="footer" class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <span class="footer-logo">◆ GALLANT SOLUTIONS</span>
+            <p class="footer-tagline">Building Digital Realities</p>
+          </div>
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer-copy">
+            <p>&copy; 2025 Gallant Solutions. All rights reserved.</p>
+            <p class="footer-meta">You entered the digital universe.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Audio toggle -->
+  <button id="audio-toggle" class="audio-btn" aria-label="Toggle audio">
+    <span class="audio-icon">🔇</span>
+  </button>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
