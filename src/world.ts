@@ -277,16 +277,29 @@ export class WorldScene {
     }
 
     private setupEvents() {
+        const handleMove = (x: number, y: number) => {
+            this.targetMouse.x = (x / window.innerWidth) * 2 - 1;
+            this.targetMouse.y = -(y / window.innerHeight) * 2 + 1;
+        };
+
         window.addEventListener('mousemove', (e) => {
-            this.targetMouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-            this.targetMouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+            handleMove(e.clientX, e.clientY);
         });
+
+        window.addEventListener('touchmove', (e) => {
+            if (e.touches.length > 0) {
+                // Prevent scrolling interference with 3D movement
+                handleMove(e.touches[0].clientX, e.touches[0].clientY);
+            }
+        }, { passive: true });
 
         window.addEventListener('resize', () => {
             if (this.isDestroyed) return;
             this.camera.aspect = window.innerWidth / window.innerHeight;
             this.camera.updateProjectionMatrix();
             this.renderer.setSize(window.innerWidth, window.innerHeight);
+            // Cap pixel ratio for mobile performance
+            this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
         });
     }
 

@@ -2050,7 +2050,7 @@ button {
 
 @media (max-width: 768px) {
   .section {
-    padding: 100px 20px 60px;
+    padding: 80px 20px 40px;
   }
 
   #main-nav {
@@ -2058,11 +2058,35 @@ button {
   }
 
   .nav-links {
-    display: none;
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 0.75rem;
   }
 
   .nav-cta {
     display: none;
+  }
+
+  .portal-pill {
+    font-size: 0.6rem;
+    padding: 6px 14px;
+  }
+
+  .title-main {
+    font-size: 2.2rem;
+    letter-spacing: 0.15em;
+  }
+
+  .title-sub {
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+  }
+
+  .title-tagline {
+    font-size: 0.9rem;
+    max-width: 90%;
   }
 
   .service-card {
@@ -2071,43 +2095,39 @@ button {
     text-align: center;
   }
 
-  .service-visual {
+  .service-icon {
     margin: 0 auto;
   }
 
   .home-stats {
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
   }
 
   .team-members {
     grid-template-columns: 1fr 1fr;
   }
 
-  .timeline-item::before {
-    left: -75px;
-    font-size: 0.6rem;
-  }
-
-  .title-main {
-    letter-spacing: 0.15em;
-  }
-
-  .title-sub {
-    letter-spacing: 0.2em;
-  }
-
   .form-row {
     grid-template-columns: 1fr;
   }
 
-  .form-submit {
-    width: 100%;
+  .portfolio-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
+  .nav-links {
+    display: none;
+  }
+
   .team-members {
     grid-template-columns: 1fr;
+  }
+
+  .title-main {
+    font-size: 1.8rem;
   }
 }

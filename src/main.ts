@@ -92,6 +92,9 @@ class GallantExperience {
     flash.classList.remove('active');
     flash.style.display = 'none';
 
+    // Stop audio after transition if user wants it quiet
+    this.audio.stop();
+
     // Animate in the main website
     this.revealWorld();
   }
